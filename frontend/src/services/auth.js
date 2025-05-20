@@ -69,3 +69,13 @@ export const refreshToken = async () => {
   
   return response.data;
 };
+
+/**
+ * Request a password reset
+ * @param {string} email - User's email
+ * @returns {Promise} - API response
+ */
+export const resetPassword = async (email) => {
+  const response = await api.post('/auth/forgot-password', { email });
+  return response.data;
+};

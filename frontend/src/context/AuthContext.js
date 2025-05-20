@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { login as apiLogin, register as apiRegister, getProfile, refreshToken } from '../services/auth';
+import { login as apiLogin, register as apiRegister, getProfile, refreshToken, resetPassword as apiResetPassword } from '../services/auth';
 
 const AuthContext = createContext();
 
@@ -105,6 +105,16 @@ export function AuthProvider({ children }) {
     setCurrentUser(userData);
   };
 
+  const resetPassword = async (email) => {
+    try {
+      setError(null);
+      await apiResetPassword(email);
+    } catch (err) {
+      setError(err.response?.data?.message || 'Password reset failed');
+      throw err;
+    }
+  };
+
   const value = {
     currentUser,
     isAuthenticated,
@@ -113,7 +123,8 @@ export function AuthProvider({ children }) {
     login,
     register,
     logout,
-    updateUser
+    updateUser,
+    resetPassword
   };
 
   return (

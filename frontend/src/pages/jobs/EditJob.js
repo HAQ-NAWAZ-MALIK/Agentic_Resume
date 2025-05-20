@@ -102,7 +102,7 @@ const EditJob = () => {
         </p>
       </div>
       
-      {error && (a
+      {error && (
         <div className="mb-4 bg-red-50 p-4 rounded-md">
           <div className="text-sm text-red-700">{error}</div>
         </div>
