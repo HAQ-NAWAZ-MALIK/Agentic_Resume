@@ -33,7 +33,7 @@ AgenticResume is an advanced web application that leverages AI agents to automat
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/agentic-resume.git
+https://github.com/HAQ-NAWAZ-MALIK/Agentic_Resume.git
 cd agentic-resume
 ```
 
