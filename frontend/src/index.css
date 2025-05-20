@@ -1,0 +1,115 @@
+/* Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-200 text-secondary-700 hover:bg-secondary-300 focus:ring-secondary-500;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  .form-input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-error {
+    @apply mt-2 text-sm text-red-600;
+  }
+
+  .card {
+    @apply bg-white shadow-sm rounded-lg overflow-hidden;
+  }
+
+  .card-header {
+    @apply bg-gray-50 px-4 py-5 sm:px-6;
+  }
+
+  .card-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+
+  .card-footer {
+    @apply bg-gray-50 px-4 py-4 sm:px-6;
+  }
+}
+
+/* Markdown rendering styles */
+.markdown {
+  @apply text-gray-900 leading-normal;
+}
+
+.markdown h1 {
+  @apply text-2xl font-bold mb-4 mt-6;
+}
+
+.markdown h2 {
+  @apply text-xl font-bold mb-4 mt-6;
+}
+
+.markdown h3 {
+  @apply text-lg font-bold mb-3 mt-5;
+}
+
+.markdown h4 {
+  @apply text-base font-bold mb-2 mt-4;
+}
+
+.markdown p {
+  @apply mb-4;
+}
+
+.markdown ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.markdown ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+.markdown li {
+  @apply mb-1;
+}
+
+.markdown a {
+  @apply text-primary-600 hover:text-primary-800 underline;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-200 pl-4 italic my-4;
+}
+
+.markdown code {
+  @apply font-mono bg-gray-100 rounded px-1 py-0.5;
+}
+
+.markdown pre {
+  @apply font-mono bg-gray-100 rounded p-3 my-4 overflow-x-auto;
+}

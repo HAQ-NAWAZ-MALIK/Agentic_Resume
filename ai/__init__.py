@@ -1,0 +1,3 @@
+ """
+AI components initialization.
+"""
